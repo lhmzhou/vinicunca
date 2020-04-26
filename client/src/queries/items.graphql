@@ -1,0 +1,8 @@
+query Items{
+    items {
+        _id
+        name: item
+        qty
+        status
+    }
+}

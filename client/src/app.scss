@@ -1,0 +1,17 @@
+@import "~antd/dist/antd.css";
+
+nav.app-nav {
+  &>a {
+    border-right: solid 1px dimgray;
+    padding: 0 1em;
+  }
+
+  &>a:last-child {
+    border-right: none;
+  }
+
+  &>a.active-link {
+    text-decoration: underline;
+    color: darkorange;
+  }
+}

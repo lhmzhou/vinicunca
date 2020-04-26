@@ -1,0 +1,12 @@
+query ($orderId: String!){
+    order(id: $orderId) {
+        _id
+        qty
+        userId
+        item {
+            name: item
+            inStock: qty
+            _id
+        }
+    }
+}

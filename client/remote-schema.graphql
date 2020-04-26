@@ -1,0 +1,84 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Item {
+    _id: String!
+    item: String
+    qty: Int
+    size: Size
+    status: String
+    tags: [String]
+}
+
+type Mutation {
+    createOrder(itemId: String!, qty: Int!, tags: [String], userId: Int!): Order
+    deleteOrder(_id: String!): Order
+    updateItem(itemToUpdate: ItemInput): Item
+    updateOrder(_id: String!, qty: Int, tags: [String]): Order
+}
+
+type Order {
+    _id: String!
+    expiresOn: String!
+    item: Item
+    itemId: String!
+    qty: Int!
+    tags: [String]
+    user: User
+    userId: Int!
+}
+
+type Query {
+    dateTime: String
+    findUser(id: Int, name: String): User
+    item(id: String!): Item
+    items: [Item]!
+    order(id: String!): Order
+    orders: [Order]!
+    timeStamp: String
+    user(id: Int!): User
+    users: [User]!
+}
+
+type Size {
+    h: Float
+    uom: String
+    w: Float
+}
+
+type User {
+    address: UserAddress
+    email: String
+    id: Int
+    name: String
+    phone: String
+    username: String
+    website: String
+}
+
+type UserAddress {
+    city: String
+    street: String
+    suite: String
+    zipcode: String
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+input ItemInput {
+    _id: String!
+    item: String
+    qty: Int
+    tags: [String]
+}
+
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

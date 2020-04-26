@@ -1,0 +1,9 @@
+query Item($itemId: String!) {
+    item(id: $itemId) {
+        _id
+        status
+        name:item
+        qty
+        tags
+    }
+}

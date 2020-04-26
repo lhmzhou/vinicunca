@@ -1,0 +1,7 @@
+mutation UpdateItem($item: ItemInput) {
+    updateItem(itemToUpdate: $item) {
+        _id
+        name:item
+        qty
+    }
+}
