@@ -1,0 +1,21 @@
+type Size {
+    h: Float,
+    w: Float,
+    uom: String
+}
+
+type Item {
+    _id: String!
+    item: String
+    qty: Int
+    status: String
+    size: Size
+    tags: [String]
+}
+
+input ItemInput {
+    _id: String!
+    item: String
+    qty: Int
+    tags: [String]
+}

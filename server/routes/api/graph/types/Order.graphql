@@ -1,0 +1,10 @@
+type Order {
+    _id: String!
+    itemId: String!
+    item: Item
+    user: User
+    qty: Int!
+    userId: Int!,
+    expiresOn: String!
+    tags: [String]
+}
